@@ -15,7 +15,7 @@ def get_rand_img_url(page: str, url_limit: int) -> str:
     :returns: A randomly selected image URL from `page`.
     """
     urls = []
-    # Creating intermediate variables web scraping
+    # Creating intermediate variables speeds up web scraping
     soup = bs4.BeautifulSoup(page, 'html.parser')
     for _ in range(url_limit):
         for img in soup.find_all('img'):
